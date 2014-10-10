@@ -4,7 +4,7 @@
   <title><![CDATA[aaron札记]]></title>
   <link href="http://aaronjzhang.github.io/atom.xml" rel="self"/>
   <link href="http://aaronjzhang.github.io/"/>
-  <updated>2014-10-10T11:39:02+08:00</updated>
+  <updated>2014-10-10T11:48:50+08:00</updated>
   <id>http://aaronjzhang.github.io/</id>
   <author>
     <name><![CDATA[aaron]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://aaronjzhang.github.io/blog/2014/10/10/hello-world/"/>
+    <updated>2014-10-10T11:46:07+08:00</updated>
+    <id>http://aaronjzhang.github.io/blog/2014/10/10/hello-world</id>
+    <content type="html"><![CDATA[<p>Hello GitHub, I come!</p>
+]]></content>
+  </entry>
   
 </feed>
