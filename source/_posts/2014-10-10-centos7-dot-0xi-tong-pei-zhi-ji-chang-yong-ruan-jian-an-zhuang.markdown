@@ -12,14 +12,14 @@ CentOS 7.0安装完成之后系统还比较裸, 需要修改一些配置, 安装
 <!-- more -->
 ## 系统配置
 
-1. 执行ip addr命令查看网络是分配了ip地址, 如果没有, 修改网卡配置文件. 网卡的配置文件为/etc/sysconfig/network-script/ifcfg-网卡名, 网卡名通过ip addr命令可以看到, 例如我的系统网卡配置文件为:/etc/sysconfig/network-scripts/ifcfg-enp2s0, 用vi打开它, 找到ONBOOT=no行, 将其修改为ONBOOT=yes, 修改完成后重启系统.
+1. 执行`ip addr`命令查看网络是分配了ip地址, 如果没有, 修改网卡配置文件. 网卡的配置文件为`/etc/sysconfig/network-script/ifcfg-网卡名`, 网卡名通过`ip addr`命令可以看到, 例如我的系统网卡配置文件为:`/etc/sysconfig/network-scripts/ifcfg-enp2s0`, 用vi打开它, 找到`ONBOOT=no`行, 将其修改为`ONBOOT=yes`, 修改完成后重启系统.
 
 2. 修改yum源	
 由于默认的yum源在境外, 网络状况不佳, 需要修改为国内科大镜像. 
 
 		cd /etc/yum.repos.d/
 		mv CentOS-Base.repo CentOS-Base.repo.bak
-下载[科大镜像yum源配置文件](https://lug.ustc.edu.cn/wiki/\_export/code/mirrors/help/centos?codeblock=3), 上传到/etc/yum.repos.d/目录, 执行如下命令:    
+下载[科大镜像yum源配置文件](https://lug.ustc.edu.cn/wiki/\_export/code/mirrors/help/centos?codeblock=3), 上传到`/etc/yum.repos.d/`目录, 执行如下命令:    
 
 		yum clean all
 		yum makecache
@@ -35,7 +35,7 @@ CentOS 7.0安装完成之后系统还比较裸, 需要修改一些配置, 安装
 5. 查看当前时区
 
 		date -R
-如果不是+0800, 编辑/etc/profile, 在文件最后一行添加TZ='Asia/Shanghai';export TZ执行命令:
+如果不是+0800, 编辑`/etc/profile`, 在文件最后一行添加`TZ='Asia/Shanghai';export TZ`执行命令:
 
 		source /etc/profile
 
@@ -109,5 +109,5 @@ CentOS 7.0安装完成之后系统还比较裸, 需要修改一些配置, 安装
 		filetype plugin indent on
 		"\}\}\}
 
-3. 打开vim，输入:BundleInstall,等待插件安装完毕
+3. 打开vim，输入`:BundleInstall`,等待插件安装完毕
 
