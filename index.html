@@ -9,7 +9,7 @@
   <meta name="author" content="aaron">
 
   
-  <meta name="description" content="概述 CentOS 7.0安装完成之后系统还比较裸, 需要修改一些配置, 安装一些常用软件之后才能方便的使用. 本文简单记录这些配置方法及如何安装常用的软件. ">
+  <meta name="description" content="Octorpress 的默认导航栏只有两个栏目(Blog|Archives), 且都是英文, 希望能增加一个"关于"栏目, 英文都改成中文, 经过一番研究终于得以实现，在此记录备忘. ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,40 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai/">Octorpress导航栏修改</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-10-11T16:50:03+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:50 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octorpress 的默认导航栏只有两个栏目(Blog|Archives), 且都是英文, 希望能增加一个&#8221;关于&#8221;栏目, 英文都改成中文, 经过一番研究终于得以实现，在此记录备忘.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -145,6 +179,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai/">Octorpress导航栏修改</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/10/centos7-dot-0xi-tong-pei-zhi-ji-chang-yong-ruan-jian-an-zhuang/">CentOS7.0系统配置及常用软件安装</a>
       </li>
     
@@ -153,6 +191,35 @@
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/aaronjzhang">@aaronjzhang</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'aaronjzhang',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 

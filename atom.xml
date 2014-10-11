@@ -4,7 +4,7 @@
   <title><![CDATA[aaron札记]]></title>
   <link href="http://aaronjzhang.github.io/atom.xml" rel="self"/>
   <link href="http://aaronjzhang.github.io/"/>
-  <updated>2014-10-11T13:43:45+08:00</updated>
+  <updated>2014-10-11T17:00:57+08:00</updated>
   <id>http://aaronjzhang.github.io/</id>
   <author>
     <name><![CDATA[aaron]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octorpress导航栏修改]]></title>
+    <link href="http://aaronjzhang.github.io/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai/"/>
+    <updated>2014-10-11T16:50:03+08:00</updated>
+    <id>http://aaronjzhang.github.io/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai</id>
+    <content type="html"><![CDATA[<p>Octorpress 的默认导航栏只有两个栏目(Blog|Archives), 且都是英文, 希望能增加一个&#8221;关于&#8221;栏目, 英文都改成中文, 经过一番研究终于得以实现，在此记录备忘.</p>
+
+<!--more-->
+
+
+<h2>导航栏的英文改为中文</h2>
+
+<p>修改_include/custom/navigation.html</p>
+
+<figure class='code'><figcaption><span>原_include/custom/navigation.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/blog/archives&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>修改后的_include/custom/navigation.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>首页<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/blog/archives&quot;</span><span class="nt">&gt;</span>所有文章<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>增加about页面</h2>
+
+<ul>
+<li>首先执行如下命令生成About页面:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_page<span class="o">[</span>about<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>该命令会在source目录下创建about文件夹, 并在该文件夹下生成index.markdown文件, 编辑该文件, 添加&#8221;关于&#8221;的内容.</p>
+
+<ul>
+<li>将about页面添加到导航栏</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>_include/custom/navigation.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>首页<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/blog/archives&quot;</span><span class="nt">&gt;</span>所有文章<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/about&quot;</span><span class="nt">&gt;</span>关于<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CentOS7.0系统配置及常用软件安装]]></title>
@@ -30,110 +100,207 @@
 <ol>
 <li><p>执行<code>ip addr</code>命令查看网络是分配了ip地址, 如果没有, 修改网卡配置文件. 网卡的配置文件为<code>/etc/sysconfig/network-script/ifcfg-网卡名</code>, 网卡名通过<code>ip addr</code>命令可以看到, 例如我的系统网卡配置文件为:<code>/etc/sysconfig/network-scripts/ifcfg-enp2s0</code>, 用vi打开它, 找到<code>ONBOOT=no</code>行, 将其修改为<code>ONBOOT=yes</code>, 修改完成后重启系统.</p></li>
 <li><p>修改yum源
-由于默认的yum源在境外, 网络状况不佳, 需要修改为国内科大镜像.</p>
+由于默认的yum源在境外, 网络状况不佳, 需要修改为国内科大镜像.</p></li>
+</ol>
 
-<pre><code>  cd /etc/yum.repos.d/
-  mv CentOS-Base.repo CentOS-Base.repo.bak
-</code></pre>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> /etc/yum.repos.d/
+</span><span class='line'>mv CentOS-Base.repo CentOS-Base.repo.bak
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>下载<a href="https://lug.ustc.edu.cn/wiki/_export/code/mirrors/help/centos?codeblock=3">科大镜像yum源配置文件</a>, 上传到<code>/etc/yum.repos.d/</code>目录, 执行如下命令:</p>
 
-<pre><code>  yum clean all
-  yum makecache
-</code></pre></li>
-<li><p>安装常用软件</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum clean all
+</span><span class='line'>yum makecache
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code> yum install wget lrzsz vim gcc gcc-c++ net-tools mlocate java autoconf openssl man-pages cmake unzip gdb ctags git telnet ntpdate zip 
-</code></pre></li>
-<li><p>更新locate数据库</p>
 
-<pre><code> updatedb
-</code></pre></li>
-<li><p>查看当前时区</p>
+<ol>
+<li>安装常用软件</li>
+</ol>
 
-<pre><code> date -R
-</code></pre>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum install wget lrzsz vim gcc gcc-c++ net-tools mlocate java autoconf openssl man-pages cmake unzip gdb ctags git telnet ntpdate zip
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>更新locate数据库</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>updatedb
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>查看当前时区</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>date -R
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>如果不是+0800, 编辑<code>/etc/profile</code>, 在文件最后一行添加<code>TZ='Asia/Shanghai';export TZ</code>执行命令:</p>
 
-<pre><code>  source /etc/profile
-</code></pre></li>
-<li><p>如果当前系统时间不准确, 执行同步时间命令:</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span> /etc/profile
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code> ntpdate asia.pool.ntp.org
-</code></pre></li>
-<li><p>添加用户</p>
 
-<pre><code> useradd username
- password username
-</code></pre>
-
-<p>根据提示设置密码</p></li>
+<ol>
+<li>如果当前系统时间不准确, 执行同步时间命令:</li>
 </ol>
 
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ntpdate asia.pool.ntp.org
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>添加用户</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>useradd username
+</span><span class='line'>password username
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>根据提示设置密码</p>
 
 <h2>vim环境配置</h2>
 
 <ol>
-<li><p>下载bundle插件</p>
+<li>下载bundle插件</li>
+</ol>
 
-<pre><code> git clone  https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-</code></pre></li>
-<li><p>编辑~/.vimrc文件, 输入如下脚本:</p>
 
-<pre><code> set nu
- set autoindent
- set tabstop=4
- set softtabstop=4
- set cindent
- set shiftwidth=4
- set enc=utf-8
- "set fenc=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
- syntax on
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone  https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+</span></code></pre></td></tr></table></div></figure>
 
- "设置nerdtree
- map &lt;F3&gt; :NERDTreeMirror&lt;CR&gt;
- map &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
 
- "设置Ctrl+]
- map &lt;F12&gt; &lt;C-]&gt;
+<ol>
+<li>编辑~/.vimrc文件, 输入如下脚本:</li>
+</ol>
 
- "设置Taglist \{\{\{
- let Tlist_Show_One_File = 1 "不同时显示多个文件的tag,只显示当前文件的
- let Tlist_Exit_OnlyWindow = 1 "如果taglist是最后一个窗口,则退出
- let Tlist_Use_Right_Window = 1 "Taglist窗口显示在右边
- map &lt;F9&gt; :Tlist&lt;CR&gt;
 
- "\}\}\}
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="k">nu</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">autoindent</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">4</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">softtabstop</span><span class="p">=</span><span class="m">4</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">cindent</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">4</span>
+</span><span class='line'><span class="k">set</span> <span class="nb">enc</span><span class="p">=</span>utf<span class="m">-8</span>
+</span><span class='line'><span class="c">&quot;set fenc=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936</span>
+</span><span class='line'><span class="nb">syntax</span> <span class="k">on</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&quot;设置nerdtree</span>
+</span><span class='line'>map <span class="p">&lt;</span>F3<span class="p">&gt;</span> :NERDTreeMirror<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</span><span class='line'>map <span class="p">&lt;</span>F3<span class="p">&gt;</span> :NERDTreeToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&quot;设置Ctrl+]</span>
+</span><span class='line'>map <span class="p">&lt;</span>F12<span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span>]<span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&quot;设置Taglist </span>
+</span><span class='line'><span class="k">let</span> Tlist_Show_One_File <span class="p">=</span> <span class="m">1</span>  <span class="c">&quot;不同时显示多个文件的tag,只显示当前文件的</span>
+</span><span class='line'><span class="k">let</span> Tlist_Exit_OnlyWindow <span class="p">=</span> <span class="m">1</span> <span class="c">&quot;如果taglist是最后一个窗口,则退出</span>
+</span><span class='line'><span class="k">let</span> Tlist_Use_Right_Window <span class="p">=</span> <span class="m">1</span> <span class="c">&quot;Taglist窗口显示在右边</span>
+</span><span class='line'>map <span class="p">&lt;</span>F9<span class="p">&gt;</span> :Tlist<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c">&quot;设置F7执行make</span>
+</span><span class='line'>map <span class="p">&lt;</span>F7<span class="p">&gt;</span> :<span class="k">make</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&quot;vundle设置 </span>
+</span><span class='line'><span class="k">set</span> <span class="nb">nocompatible</span> <span class="c">&quot;be iMproved</span>
+</span><span class='line'><span class="k">filetype</span> off
+</span><span class='line'>
+</span><span class='line'><span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle/vundle
+</span><span class='line'><span class="k">call</span> vundle#rc<span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>Bundle <span class="s1">&#39;gmarik/vundle&#39;</span>
+</span><span class='line'><span class="c">&quot;可以通过4种方式指定插件来源</span>
+</span><span class='line'><span class="c">&quot;a)</span>
+</span><span class='line'><span class="c">&quot;指定GitHub中vim-scripts仓库中的插件,直接指定插件名称即可,插件名中的空格使用&quot;-&quot;代替.</span>
+</span><span class='line'>Bundle <span class="s1">&#39;L9&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;taglist.vim&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;scrooloose/nerdtree&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;xml.vim&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;FuzzyFinder&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;json.vim&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;pyflakes&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;Snipmate&#39;</span>
+</span><span class='line'>Bundle <span class="s1">&#39;AutoComplPop&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">filetype</span> plugin indent <span class="k">on</span>
+</span></code></pre></td></tr></table></div></figure>
 
- "设置F7执行make
- map &lt;F7&gt; :make&lt;CR&gt;
 
- "vundle设置 \{\{\{
- set nocompatible "be iMproved
- filetype off
-
- set rtp+=~/.vim/bundle/vundle
- call vundle#rc()
-
- Bundle 'gmarik/vundle'
- "可以通过4种方式指定插件来源
- "a)
- "指定GitHub中vim-scripts仓库中的插件,直接指定插件名称即可,插件名中的空格使用"-"代替.
- Bundle 'L9'
- Bundle 'taglist.vim'
- Bundle 'scrooloose/nerdtree'
- Bundle 'xml.vim'
- Bundle 'FuzzyFinder'
- Bundle 'json.vim'
- Bundle 'pyflakes'
- Bundle 'Snipmate'
- Bundle 'AutoComplPop'
-
- filetype plugin indent on
- "\}\}\}
-</code></pre></li>
-<li><p>打开vim，输入<code>:BundleInstall</code>,等待插件安装完毕</p></li>
+<ol>
+<li>打开vim，输入<code>:BundleInstall</code>,等待插件安装完毕</li>
 </ol>
 
 ]]></content>
