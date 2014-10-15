@@ -4,7 +4,7 @@
   <title><![CDATA[aaron札记]]></title>
   <link href="http://aaronjzhang.github.io/atom.xml" rel="self"/>
   <link href="http://aaronjzhang.github.io/"/>
-  <updated>2014-10-11T17:07:22+08:00</updated>
+  <updated>2014-10-15T10:00:37-07:00</updated>
   <id>http://aaronjzhang.github.io/</id>
   <author>
     <name><![CDATA[aaron]]></name>
@@ -14,9 +14,18 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Home Test]]></title>
+    <link href="http://aaronjzhang.github.io/blog/2014/10/15/home-test/"/>
+    <updated>2014-10-15T09:50:57-07:00</updated>
+    <id>http://aaronjzhang.github.io/blog/2014/10/15/home-test</id>
+    <content type="html"><![CDATA[<p>post from home</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Octorpress导航栏修改]]></title>
     <link href="http://aaronjzhang.github.io/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai/"/>
-    <updated>2014-10-11T16:50:03+08:00</updated>
+    <updated>2014-10-11T01:50:03-07:00</updated>
     <id>http://aaronjzhang.github.io/blog/2014/10/11/octorpressdao-hang-lan-xiu-gai</id>
     <content type="html"><![CDATA[<p>Octorpress 的默认导航栏只有两个栏目(Blog|Archives), 且都是英文, 希望能增加一个&#8221;关于&#8221;栏目, 英文都改成中文, 经过一番研究终于得以实现，在此记录备忘.</p>
 
@@ -85,9 +94,9 @@
   
   <entry>
     <title type="html"><![CDATA[CentOS7.0系统配置及常用软件安装]]></title>
-    <link href="http://aaronjzhang.github.io/blog/2014/10/10/centos7-dot-0xi-tong-pei-zhi-ji-chang-yong-ruan-jian-an-zhuang/"/>
-    <updated>2014-10-10T14:21:29+08:00</updated>
-    <id>http://aaronjzhang.github.io/blog/2014/10/10/centos7-dot-0xi-tong-pei-zhi-ji-chang-yong-ruan-jian-an-zhuang</id>
+    <link href="http://aaronjzhang.github.io/blog/2014/10/09/centos7-dot-0xi-tong-pei-zhi-ji-chang-yong-ruan-jian-an-zhuang/"/>
+    <updated>2014-10-09T23:21:29-07:00</updated>
+    <id>http://aaronjzhang.github.io/blog/2014/10/09/centos7-dot-0xi-tong-pei-zhi-ji-chang-yong-ruan-jian-an-zhuang</id>
     <content type="html"><![CDATA[<h2>概述</h2>
 
 <p>CentOS 7.0安装完成之后系统还比较裸, 需要修改一些配置, 安装一些常用软件之后才能方便的使用. 本文简单记录这些配置方法及如何安装常用的软件.</p>
@@ -308,9 +317,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://aaronjzhang.github.io/blog/2014/10/10/hello-world/"/>
-    <updated>2014-10-10T11:46:07+08:00</updated>
-    <id>http://aaronjzhang.github.io/blog/2014/10/10/hello-world</id>
+    <link href="http://aaronjzhang.github.io/blog/2014/10/09/hello-world/"/>
+    <updated>2014-10-09T20:46:07-07:00</updated>
+    <id>http://aaronjzhang.github.io/blog/2014/10/09/hello-world</id>
     <content type="html"><![CDATA[<p>Hello GitHub, I come!</p>
 ]]></content>
   </entry>
