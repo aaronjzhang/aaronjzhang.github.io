@@ -1,0 +1,8 @@
+---
+layout: post
+title: "home test"
+date: 2014-10-15 09:50:57 -0700
+comments: true
+categories: 
+---
+post from home
