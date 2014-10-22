@@ -61,6 +61,11 @@ password username
 ```
 根据提示设置密码
 
+8. 关闭防火墙
+```bash
+systemctl stop firewalld
+```
+
 ## vim环境配置
 
 1. 下载bundle插件
