@@ -4,7 +4,7 @@
   <title><![CDATA[aaron札记]]></title>
   <link href="http://aaronjzhang.github.io/atom.xml" rel="self"/>
   <link href="http://aaronjzhang.github.io/"/>
-  <updated>2014-10-22T14:06:39+08:00</updated>
+  <updated>2014-10-22T15:16:35+08:00</updated>
   <id>http://aaronjzhang.github.io/</id>
   <author>
     <name><![CDATA[aaron]]></name>
@@ -187,18 +187,6 @@
 </span><span class='line'>password username
 </span></code></pre></td></tr></table></div></figure>
 
-
-<ol>
-<li>关闭防火墙</li>
-</ol>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>systemctl stop firewalld
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>`</p>
 
 <p>根据提示设置密码</p>
 
