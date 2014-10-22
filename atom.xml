@@ -4,7 +4,7 @@
   <title><![CDATA[aaron札记]]></title>
   <link href="http://aaronjzhang.github.io/atom.xml" rel="self"/>
   <link href="http://aaronjzhang.github.io/"/>
-  <updated>2014-10-11T17:07:22+08:00</updated>
+  <updated>2014-10-22T14:02:28+08:00</updated>
   <id>http://aaronjzhang.github.io/</id>
   <author>
     <name><![CDATA[aaron]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Home Test]]></title>
+    <link href="http://aaronjzhang.github.io/blog/2014/10/16/home-test/"/>
+    <updated>2014-10-16T00:50:57+08:00</updated>
+    <id>http://aaronjzhang.github.io/blog/2014/10/16/home-test</id>
+    <content type="html"><![CDATA[<p>post from home</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octorpress导航栏修改]]></title>
@@ -178,6 +187,18 @@
 </span><span class='line'>password username
 </span></code></pre></td></tr></table></div></figure>
 
+
+<ol>
+<li>关闭防火墙</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>systemctl stop firewalld
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>`</p>
 
 <p>根据提示设置密码</p>
 
